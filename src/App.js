@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import { name, age } from "./components/data";
+import Booklist from "./components/Booklist";
+import Namere from "./components/namere";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// <<<--STATELESS FUNCTIONAL COMPONENT-->>>>>
+// function App() {
+//   return (
+//     <div>
+//       <h1 className="hello">hello from app</h1>
+//       <Booklist />
+//       <Namere />
+//       <p className="hello">{name}</p>
+//       <p className="hello">{age}</p>
+//     </div>
+//   );
+// }
+
+class App1 extends Component {
+  render() {
+    return (
+      <div>
+        <Booklist />
+      </div>
+    );
+  }
 }
 
-export default App;
+export default App1;
